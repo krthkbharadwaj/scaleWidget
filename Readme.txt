@@ -10,6 +10,12 @@ Ex: $("#scale-widget").scaleWidget();
 
 More explanation on this plugin, and updates will be pushed shortly.
 
+==============================
+In my second release, branch name - release_2_0109
+
+If the parent ID / CLASS has margin for the widget, then issues pertaining to aspect ratio has been fixed.
+
+
 Thanks.
 
 Regards

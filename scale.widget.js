@@ -13,7 +13,9 @@
  var noTop =''; 
  var scenario = '';
  var widgetBorderTop = '';
+ var widgetBorderBottom = '';
  var widgetBorderLeft = '';
+ var widgetBorderRight = '';
 
  if($(this).hasClass("scale-widget")) {
    scenario = 'preview';
@@ -38,14 +40,18 @@
  widgetWidth  = widget.outerWidth();
 
  widgetBorderTop = widget.css('border-top-width');
- widgetBorderLeft = widget.css('border-left-width'); 
- widgetBorderTop = widgetBorderTop.replace('px','');
- widgetBorderLeft = widgetBorderLeft.replace('px','');
+ widgetBorderBottom = widget.css('border-bottom-width');
+ widgetBorderLeft = widget.css('border-left-width');
+ widgetBorderRight = widget.css('border-right-width');
 
- if(widgetBorderTop !=undefined && widgetBorderLeft !=undefined) {
- 	widgetHeight = widgetHeight - widgetBorderTop - widgetBorderTop;
- 	widgetWidth  = widgetWidth - widgetBorderLeft - widgetBorderLeft;
- }
+ widgetBorderTop = widgetBorderTop.replace('px','');
+ widgetBorderBottom = widgetBorderBottom.replace('px','');
+ widgetBorderLeft = widgetBorderLeft.replace('px','');
+ widgetBorderRight = widgetBorderRight.replace('px','');
+
+ widgetHeight = widgetHeight - widgetBorderTop - widgetBorderBottom;
+ widgetWidth  = widgetWidth - widgetBorderLeft - widgetBorderRight;
+
  objectHeight = object.outerHeight();
  objectWidth  = object.outerWidth();
 
